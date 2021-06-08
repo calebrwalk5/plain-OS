@@ -1,8 +1,3 @@
-/***************************************/
-/* kernel main file 		       */
-/* Written by sunil <sunilbn@live.com> */
-/***************************************/
-
 #include <system.h>
 #include <multiboot.h>
 #include <io.h>
@@ -13,26 +8,23 @@
 #include <gdt.h>
 //#include <ldt.h>
 
-void start_terminal()
-{
-  printf("root@simpleOS>");
+void start_terminal() {
+  printf("root@anusOS>");
 }
 
-void keyboard_init()
-{
+void keyboard_init() ={
   
 }
 
-/* kernel entry point for simpleOS */
-void kmain(struct multiboot_info *boot_info)
-{
+// Kernel init
+void kernel(struct multiboot_info *boot_info) {
   console_init();
   gdt_init();
   idt_init();
   keyboard_init();  
   
   char *version = "0.1";
-  print("Welcome to Simple OS!");
+  print("Welcome to anusOS!");
   printf(" version: %s\n",version);
   print("==============================================\n");
   print("VGA setup\t   ... [ok] \n");
@@ -60,8 +52,6 @@ void kmain(struct multiboot_info *boot_info)
     asm volatile ("int $0x3");
 
   start_terminal();
-  //place your code for kernel startup here
-
-  //kernel main should never return
+  printf("anusOS terminal...\n");
   while(1);
 }
