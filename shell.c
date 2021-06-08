@@ -14,7 +14,7 @@ int main() {
 
 void term() {
   char cmd[30];
-  printf("root@anusOS> ");
+  printf("root@plain-OS> ");
   scanf("%s", cmd);
   if (cmd == "hello") {
     hello();
