@@ -10,7 +10,7 @@ int main() {
   term();
   return 0;
 }
-int term() {
+void term() {
   char cmd[30];
   printf("Welcome to the anusOS shell, enjoy your stay\n");
   printf("root@anusOS> ");
