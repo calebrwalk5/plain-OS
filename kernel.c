@@ -24,7 +24,8 @@ void kernel(struct multiboot_info *boot_info) {
   keyboard_init();  
   
   char *version = "0.1";
-  print("Welcome to anusOS!");
+  char *name = "anusOS";
+  print("Welcome to %s!",name);
   printf(" version: %s\n",version);
   print("==============================================\n");
   print("VGA setup\t   ... [ok] \n");
@@ -52,6 +53,6 @@ void kernel(struct multiboot_info *boot_info) {
     asm volatile ("int $0x3");
 
   start_terminal();
-  printf("anusOS terminal...\n");
+  printf("%s terminal...\n",name);
   while(1);
 }
