@@ -3,6 +3,7 @@
 ;load gdt or other stuff.
 
 ;Written by sunil <sunilbn@live.com>
+;A little bit written by anusO1
 	
 [BITS 32]
 
@@ -36,12 +37,12 @@ mboot:
 	dd end
 	dd start
 
-	extern kmain
+	extern kernel
 
 ;jump to kmain	
 post_header:
 	push ebx		;pointer to multiboot info structure
-	call kmain		;call kernel main
+	call kernel		;call kernel main
 	
 hangup:				;kmain should never return;
 	jmp hangup
