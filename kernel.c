@@ -6,8 +6,8 @@
 #include <vmemory.h>
 #include <time.h>
 #include <gdt.h>
-#include "./programs/terminal.c"
-#include "vmemory.c"
+#include "./shell.c"
+#include "./vmemory.c"
 //#include <ldt.h>
 
 void start_terminal() {
