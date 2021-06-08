@@ -6,6 +6,7 @@
 #include <vmemory.h>
 #include <time.h>
 #include <gdt.h>
+#include "./programs/terminal.c"
 //#include <ldt.h>
 
 void start_terminal() {
@@ -53,6 +54,6 @@ void kernel(struct multiboot_info *boot_info) {
     asm volatile ("int $0x3");
 
   start_terminal();
-  printf("%s terminal...\n",name);
+  term();
   while(1);
 }
