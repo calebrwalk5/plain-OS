@@ -7,6 +7,8 @@
 	
 [BITS 32]
 
+%INCLUDE "gdt.asm"
+
 	global start
 start:
 	mov esp, system_stack 	;setup a new stack
