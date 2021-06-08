@@ -11,7 +11,7 @@
 //#include <ldt.h>
 
 void start_terminal() {
-  printf("root@anusOS>");
+  printf("root@plain-OS>");
 }
 
 void keyboard_init() ={
@@ -26,7 +26,7 @@ void kernel(struct multiboot_info *boot_info) {
   keyboard_init();  
   
   char *version = "0.1";
-  char *name = "anusOS";
+  char *name = "plain-OS";
   print("Welcome to %s!",name);
   printf(" version: %s\n",version);
   print("==============================================\n");
